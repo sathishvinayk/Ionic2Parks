@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ParkData } from "../../providers/park-data"; // Importing the service here
+import {ParkDetails} from "../park-details/park-details";
 
 @Component({
   selector: 'page-park-list',
@@ -14,6 +15,8 @@ export class ParkListPage {
     })
   }
   goParkDetails(theParkData){
-    console.log(theParkData);
+    this.navCtrl.push(ParkDetails, {
+      parkData: theParkData
+    });
   }
 }
