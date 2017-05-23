@@ -22,6 +22,6 @@ export class MyApp {
       splashScreen.hide();
     });
     //Loading the parkdata service below.
-    console.log(parkData.load());
+    parkData.load();
   }
 }

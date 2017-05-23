@@ -3,7 +3,7 @@ import { Http } from "@angular/http";
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class ParkData{
+export class ParkData {
   data:any=null;
   constructor(public http: Http){
 
@@ -23,6 +23,13 @@ export class ParkData{
         this.data=data;
         resolve(this.data);
       });
+    });
+  }
+  getParks(){
+    //calling this.load() as a safety check to ensure that data is there.
+    //if not it will load it for us.
+    return this.load().then(data=>{
+      return data;
     });
   }
 }
