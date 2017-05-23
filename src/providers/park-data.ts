@@ -25,11 +25,4 @@ export class ParkData{
       });
     });
   }
-  getParks(){
-    //calling this.load() as a safety check to ensure that data is there.
-    //if not it will load it for us.
-    return this.load().then(data=>{
-      return data;
-    });
-  }
 }
