@@ -24,3 +24,12 @@ npm install @types/googlemaps --save-dev --save-exact
 ```
 import {} from '@types/googlemaps'
 ```
+### Fix 
+  To fix cannot reference issue when tapping on map tab, we need to add either the below two in our code
+  ```
+  ionViewDidLoad()
+  ```
+  ```
+  ngAfterViewInit()
+  ```
+  
