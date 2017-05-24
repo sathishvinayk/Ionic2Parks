@@ -1,11 +1,35 @@
-//So far Cannot find namespace and Cannot find name was error.
-//Updated TS version to 2.3.3 and npm to 4.6.1
-Tried created Declaration.d.ts
+# Ionic With Google Api
+Ionic Issues and Workout
 
+## Major Issues
+  * Cannot Find namespace
+  * Cannot find property of undefined while running
+  * Cannot find property of a nativeElement
 
-//Working
-Install googlemaps instead of google-maps for ionic>=version 2
-npm install --save @types/googlemaps
+### Installation
+  Need to Have the below versions
+    Typescript->2.3.2
+    Node->6.10.2
+    Npm->4.6.1
+    googlemaps->3.26.11 
 
-//Import byv using below line
-import {} from '@types/googlemaps';
+```
+npm install --save @types/googlemaps 
+```
+```
+npm install @types/googlemaps --save-dev --save-exact
+```
+### Import Statements
+
+```
+import {} from '@types/googlemaps'
+```
+### Fix 
+  To fix cannot reference issue when tapping on map tab, we need to add either the below two in our code
+  ```
+  ionViewDidLoad()
+  ```
+  ```
+  ngAfterViewInit()
+  ```
+  
