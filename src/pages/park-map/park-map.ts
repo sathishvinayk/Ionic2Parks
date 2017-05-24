@@ -11,8 +11,13 @@ export class ParkMapPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
     this.map=null;
     this.platform.ready().then(()=>{
-      this.initializeMap();
+      this.ionViewDidLoad();
     });
+  }
+  ionViewDidLoad(){
+    setTimeout(()=>{
+      this.initializeMap();
+    },500)
   }
   initializeMap(){
     let minZoomLevel=3;
