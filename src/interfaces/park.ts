@@ -1,4 +1,4 @@
-interface Park {
+export interface Park {
   id: number;
   name: string;
   createDate: string;

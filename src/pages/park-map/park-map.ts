@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { Platform, NavController, NavParams } from 'ionic-angular';
 import {} from '@types/googlemaps';
+import { Park } from "../../interfaces/park";
 import { ParkData } from "../../providers/park-data";
+import { ParkDetails }from "../park-details/park-details";
+import { CustomMapMarker }from "./custom-marker";
 
 @Component({
   selector: 'page-park-map',
@@ -41,10 +44,16 @@ export class ParkMapPage {
       for(let thePark of this.parks){
         let parkPos:google.maps.LatLng=
           new google.maps.LatLng(thePark.lat, thePark.long);
-        let parkMarker:google.maps.Marker=new google.maps.Marker();
+        let parkMarker:google.maps.Marker=new CustomMapMarker(thePark);
         parkMarker.setPosition(parkPos);
         parkMarker.setMap(this.map);
         parkMarker.setIcon(image);
+        google.maps.event.addListener(parkMarker, 'click', ()=>{
+          let selectedMarker: any = parkMarker;
+          this.navCtrl.push(ParkDetails,{
+            parkData: selectedMarker.parkData
+          });
+        })
       }
     })
   };
