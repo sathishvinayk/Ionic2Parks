@@ -6,7 +6,6 @@ import 'rxjs/add/operator/map';
 export class ParkData {
   data:any=null;
   constructor(public http: Http){
-
   }
   //Since we hardcoded file's location that we are loading,our method is not taking in a source location.
   //So hence we can use load()

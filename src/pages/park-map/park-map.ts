@@ -42,9 +42,9 @@ export class ParkMapPage {
     this.parkData.getParks().then(theResult=>{
       console.log(typeof(ParkData));
       this.parks=theResult;
-      for(let thePark in this.parks){
-        let parkPos: google.maps.LatLng=
-            new google.maps.LatLng(thePark.lat,thePark.long);
+      for(let thePark of this.parks){
+        let parkPos:google.maps.LatLng=
+          new google.maps.LatLng(thePark.lat, thePark.long);
         let parkMarker:google.maps.Marker=new google.maps.Marker();
         parkMarker.setPosition(parkPos);
         parkMarker.setMap(this.map);
