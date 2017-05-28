@@ -1,8 +1,7 @@
 # Ionic With Google Api
-Ionic Issues and Workout
+Map issue fixed.
 
 ## Major Issues
-  * Cannot Find namespace
   * Cannot find property of undefined while running
   * Cannot find property of a nativeElement
 
