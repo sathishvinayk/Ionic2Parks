@@ -1,9 +1,8 @@
-# Ionic With Google Api
-Map issue fixed.
+# Cursor Objects Implemented
+Cursor objects and click to show item details has been created
 
 ## Major Issues
-  * Cannot find property of undefined while running
-  * Cannot find property of a nativeElement
+  * Instead of for-of we used for-in property
 
 ### Installation
   Need to Have the below versions
@@ -23,12 +22,3 @@ npm install @types/googlemaps --save-dev --save-exact
 ```
 import {} from '@types/googlemaps'
 ```
-### Fix 
-  To fix cannot reference issue when tapping on map tab, we need to add either the below two in our code
-  ```
-  ionViewDidLoad()
-  ```
-  ```
-  ngAfterViewInit()
-  ```
-  
