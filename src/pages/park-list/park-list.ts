@@ -63,4 +63,15 @@ export class ParkListPage {
       this.parks=theResult;
     })
   }
+  customHeaderFn(record, recordIndex, records){
+    if(recordIndex>0){
+      if(record.name.charAt(0)!==records[recordIndex-1].name.charAt(0)){
+        return record.name.charAt(0);
+      }else {
+        return null;
+      }
+    }else {
+      return record.name.charAt(0);
+    }
+  }
 }
