@@ -1,9 +1,6 @@
-# Search Bar Implemented
-  Search Query implemented with the Park List
+# CustomList Headers
+  Custom header feature added. Skipped the themeing issue.
 ## Major Issues
-  * Reader Code has been rectified
-  * Parkdata.load() on line 48
-  * this.getFilteredParks() on line 41
+  * Theming needs to be fixed.
+  * Virtual scroll images is not populating on the screen
  
- ### Styles
-  Style property on Global varaible and scss has been added.
